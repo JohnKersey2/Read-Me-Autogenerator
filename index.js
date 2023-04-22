@@ -35,6 +35,12 @@ const questions = [
         name: 'tests',
         message: 'Please describe any tests critical to your project.'
     },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Please select the license for your application.',
+        choices: ['','MIT', 'Apache 2.0', 'Mozilla Public License', 'GNU GPLv3', 'Boost Software License 1.0', 'The Unilicense'],
+    }
 ];
 
 // TODO: Create a function to write README file

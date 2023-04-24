@@ -17,6 +17,7 @@ function renderLicenseBadge(data) {
     return `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`
   }
 }
+
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(data) {
@@ -35,7 +36,6 @@ function renderLicenseLink(data) {
   } else if(data.license === 'The Unilicense'){
     return `[${data.license}](https://choosealicense.com/licenses/unlicense/)`
   }
-
 }
 
 // TODO: Create a function that returns the license section of README
@@ -56,10 +56,19 @@ function generateMarkdown(data) {
   ## Table of Contents
   
   [Description](#description)
+
   [Installation](#installation)
+
   [Usage](#usage)
-  [Credits](#credits)
+
+  [Contribution](#contributions)
+
+  [Tests](#tests)
+
   [License](#license)
+
+  [Contact](#contact)
+
 
   ## Description
 
@@ -80,8 +89,15 @@ function generateMarkdown(data) {
   ## Tests
   ${data.tests}
 
+  ## License
   ${renderLicenseSection(data)}
   ${renderLicenseLink(data)}
+
+  ## Contact
+  
+  Github:(https://www.github.com/${data.github})
+
+  Email: [${data.email}](mailto:${data.email})
 `;
 }
 

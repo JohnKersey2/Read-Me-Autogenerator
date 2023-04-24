@@ -36,6 +36,16 @@ const questions = [
         message: 'Please describe any tests critical to your project.'
     },
     {
+        type: 'input',
+        name: 'github',
+        message: 'Please enter your Github username.'
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please enter your email address.'
+    },
+    {
         type: 'list',
         name: 'license',
         message: 'Please select the license for your application.',
